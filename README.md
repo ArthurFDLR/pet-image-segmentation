@@ -7,11 +7,14 @@
     <img src="./.github/banner.png" alt="Generated track samples" width="100%">
 </p>
 
-The task of an image classification network is to assign a label to the input image. It is not possible to know where in the image and how big the object is. One of the solutions to tackle this task is to design a pixel-wise classification system. Each pixel of the input image is given a label. However, as always in machine learning, data is crucial. The ground truth of the dataset used to train an image segmentation neural network cannot be a simple label. It has to be a mask that matches the size of the input image. The development of such a dataset requires a lot of human labor. Fortunately, there are some open-source datasets for us to experiment with. We will use the Oxford-IIIT dataset created by Parkhi et al. It consists of images of pet and a mask where each pixel is given one of three categories:
+The task of an image classification network is to assign a label to the input image. It is not possible to know where in the image and how big the object is. One of the solutions to tackle this task is to design a pixel-wise classification system. Each pixel of the input image is given a label. However, as always in machine learning, data is crucial. The ground truth of the dataset used to train an image segmentation neural network cannot be a simple label. It has to be a mask that matches the size of the input image. The development of such a dataset requires a lot of human labor. Fortunately, there are some open-source datasets for us to experiment with. We will use the Oxford-IIIT dataset created by Parkhi et al. It consists of images of pet and a mask where each pixel is given one of three categories; pixel belonging to the pet, pixel bordering the pet or, surrounding pixel.
 
- - Pixel belonging to the pet.
- - Pixel bordering the pet.
- - Surrounding pixel.
+- [Import data](#import-data)
+- [Build models](#build-models)
+  - [Basic model](#basic-model)
+  - [Custom U-Net](#custom-u-net)
+- [Training](#training)
+- [Evaluate](#evaluate)
 
 <details>
     <summary>See package import cell</summary>
